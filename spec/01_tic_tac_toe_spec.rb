@@ -41,7 +41,7 @@ puts describe './lib/tic_tac_toe.rb' do
     end
   end
 
-  describe '#input_to_index' do
+  puts describe '#input_to_index' do
 
     it 'converts user_input to an integer' do
       user_input = "1"
@@ -49,13 +49,13 @@ puts describe './lib/tic_tac_toe.rb' do
       expect(input_to_index(user_input)).to be_a(Integer)
     end
 
-    it 'subtracts 1 from the user_input' do
+    puts it 'subtracts 1 from the user_input' do
       user_input = "6"
 
       expect(input_to_index(user_input)).to be(5)
     end
 
-    it 'returns -1 for strings without integers' do
+    puts it 'returns -1 for strings without integers' do
       user_input = "invalid"
 
       expect(input_to_index(user_input)).to be(-1)
@@ -63,7 +63,7 @@ puts describe './lib/tic_tac_toe.rb' do
 
   end
 
-  describe '#move' do
+  puts describe '#move' do
 
     it 'does not allow for a default third argument' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
@@ -71,13 +71,13 @@ puts describe './lib/tic_tac_toe.rb' do
       expect{move(board, 0)}.to raise_error(ArgumentError)
     end
 
-    it 'takes three arguments: board, position, and player token' do
+    puts it 'takes three arguments: board, position, and player token' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
       expect{move(board, 0, "X")}.to_not raise_error
     end
 
-    it 'allows "X" player in the bottom right and "O" in the top left ' do
+    puts it 'allows "X" player in the bottom right and "O" in the top left ' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       move(board, 0, "O")
       move(board, 8, "X")
@@ -86,7 +86,7 @@ puts describe './lib/tic_tac_toe.rb' do
     end
   end
 
-  describe '#position_taken?' do
+  puts describe '#position_taken?' do
     it 'returns true/false based on position in board' do
       board = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
 
