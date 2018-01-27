@@ -8,7 +8,7 @@
     run_file("./bin/tictactoe")
   end
 
-   it '`board` is an array with 9 strings with an empty space value, " "' do
+   puts it '`board` is an array with 9 strings with an empty space value, " "' do
     allow($stdout).to receive(:puts)
     allow(self).to receive(:play)
 
