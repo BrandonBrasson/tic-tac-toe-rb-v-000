@@ -1,6 +1,6 @@
 require_relative '../lib/tic_tac_toe.rb'
 
-describe './lib/tic_tac_toe.rb' do
+puts describe './lib/tic_tac_toe.rb' do
   describe 'WIN_COMBINATIONS' do
     it 'defines a constant WIN_COMBINATIONS with arrays for each win combination' do
       expect(WIN_COMBINATIONS.size).to eq(8)
@@ -16,7 +16,7 @@ describe './lib/tic_tac_toe.rb' do
     end
   end
 
-  describe '#display_board' do
+  puts describe '#display_board' do
     it 'prints arbitrary arrangements of the board' do
       board = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
 
