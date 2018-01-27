@@ -1,4 +1,4 @@
-puts describe "./bin/tictactoe" do
+ describe "./bin/tictactoe" do
   it 'prints "Welcome to Tic Tac Toe!"' do
     allow($stdout).to receive(:puts)
     allow(self).to receive(:play)
@@ -17,7 +17,7 @@ puts describe "./bin/tictactoe" do
     expect(board).to match_array([" "," "," "," "," "," "," "," "," "])
   end
 
-  puts it 'calls #play passing in the board array' do
+  it 'calls #play passing in the board array' do
     allow($stdout).to receive(:puts)
 
     expect(self).to receive(:play).with(kind_of(Array))
